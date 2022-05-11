@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="search">
+           <form action="" method="GET">
+               <input type="text" placeholder="so'zni kiriting" name="qidiruv_sozi">
+               <button type="submit">qidirish</button>
+           </form>
+        </div>
+        <div class="wrapp">
+            <div class="left" id="left">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                <h1 align="center"> {{ togri.first }} </h1>
+                    <br>
+            </div>
+            <div class="right" id="right">
+                {% for soz in notogri%}
+                    <br>
+                <h1 align="center"> {{ soz }} </h1>
+                    <br>
+                {% endfor%}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
